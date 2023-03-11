@@ -9,6 +9,7 @@ public class AnimalFollower : MonoBehaviour
     public GameObject player;
     public Rigidbody thisRb;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +17,11 @@ public class AnimalFollower : MonoBehaviour
         thisRb.freezeRotation = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void setIfFollowing(bool follow)
     {
         isFollowing = follow;
-        thisRb.freezeRotation = false;
+        thisRb.freezeRotation = !follow;
     }
 
     private void FixedUpdate()

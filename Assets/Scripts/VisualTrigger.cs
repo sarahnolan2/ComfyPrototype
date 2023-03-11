@@ -24,28 +24,37 @@ public class VisualTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPlayerInRange)
+        if(visualCue != null)
         {
-            //show visual cue if player is in range
-            visualCue.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if(isPlayerInRange)
             {
-                //Debug.Log("VISUAL TRIGGER PICKUP");
-                //remove visual cues
-                isPlayerInRange = false;
+                //show visual cue if player is in range
+                visualCue.SetActive(true);
 
-                //initialize pickup!
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (gameObject != null)
+                    {
+                        //Debug.Log("VISUAL TRIGGER PICKUP");
+                        //remove visual cues
+                        isPlayerInRange = false;
 
-                AnimalMechanic gamemanager = GameObject.Find("FirstPersonController").GetComponent<AnimalMechanic>();
-                gamemanager.Pickup(gameObject, gameObject.transform.parent.gameObject);
+                        //initialize pickup!
+
+                        AnimalMechanic gamemanager = GameObject.Find("FirstPersonController").GetComponent<AnimalMechanic>();
+
                 
+                        gamemanager.Pickup(this.gameObject, gameObject.transform.parent.gameObject);
+                    }                //this.gameObject.transform.GetChild(0).gameObject
+
+                }
             }
-        }
-        else
-        {
-            //don't show visual cue if player is not in range
-            visualCue.SetActive(false);
+            else
+            {
+                //don't show visual cue if player is not in range
+                visualCue.SetActive(false);
+            }
         }
     }
 
@@ -56,8 +65,11 @@ public class VisualTrigger : MonoBehaviour
             isPlayerInRange = true;
             //Debug.Log("IN RANGE");
 
-            //show visual cue if player is in range
-            visualCue.SetActive(true);
+            if (visualCue != null)
+            {
+                //show visual cue if player is in range
+                visualCue.SetActive(true);
+            }
         }
     }
 
@@ -68,8 +80,11 @@ public class VisualTrigger : MonoBehaviour
             isPlayerInRange = false;
             //Debug.Log("OUT OF RANGE");
 
-            //don't show visual cue if player is not in range
-            visualCue.SetActive(false);
+            if (visualCue != null)
+            {
+                //don't show visual cue if player is not in range
+                visualCue.SetActive(false);
+            }
         }
     }
 }

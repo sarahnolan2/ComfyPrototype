@@ -41,7 +41,7 @@ public class AnimalFollower : MonoBehaviour
             //force *= 200.0f; // so when normalizing, the force will always be 200.
 
             //this.GetComponent<Rigidbody>().AddForce(0, 50.0f, 0);
-            this.GetComponent<Rigidbody>().AddForce(-force);
+            this.GetComponent<Rigidbody>().AddForce(-force * 5.0f);
         }
     }
 
@@ -52,17 +52,7 @@ public class AnimalFollower : MonoBehaviour
 
             ///for moving the animal in the air with the bounciness
 
-
-            Vector3 force = this.transform.position - collision.transform.position; //define a force
-
-            force.Normalize(); //means that we reduce the length to 1. 
-                           //so we do this when we want the vector or all vectors to have the same magnitude 
-                           // and only care about the direction
-
-            //force *= 200.0f; // so when normalizing, the force will always be 200.
-
             this.GetComponent<Rigidbody>().AddForce(0,5.0f,0, ForceMode.Impulse);
-            //this.GetComponent<Rigidbody>().AddForce(-force);
         }
     }
 

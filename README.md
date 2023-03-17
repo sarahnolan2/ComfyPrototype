@@ -5,7 +5,7 @@ Credits:
 - [Rabbit](https://assetstore.unity.com/packages/3d/characters/animals/white-rabbit-138709)
 - [Animals sound effects](https://assetstore.unity.com/packages/audio/sound-fx/animals/animals-95444)
 - [Vertex Tree Set](https://assetstore.unity.com/packages/3d/vertex-color-trees-set-95968)
-- [Hand-painted trees] (https://assetstore.unity.com/packages/3d/vegetation/trees/tree-hand-painted-cartoon-2021-collection-201399)
+- [Hand-painted trees](https://assetstore.unity.com/packages/3d/vegetation/trees/tree-hand-painted-cartoon-2021-collection-201399)
 - [Low Poly Texture Pack](https://assetstore.unity.com/packages/2d/textures-materials/lowpoly-textures-pack-140717)
 - Lanterns from [Halloween Pack](https://assetstore.unity.com/packages/3d/environments/fantasy/free-cartoon-halloween-pack-mobile-vr-45896)
 - [Coffeeshop Starter Pack](https://assetstore.unity.com/packages/3d/props/coffeeshop-starter-pack-160914)

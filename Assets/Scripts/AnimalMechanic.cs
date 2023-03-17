@@ -21,9 +21,12 @@ public class AnimalMechanic : MonoBehaviour
     AudioSource aso;
     public AudioClip[] clips = new AudioClip[2];
 
+    private int totalNumberAnimals;
+
     // Start is called before the first frame update
     void Start()
     {
+        totalNumberAnimals = 5;
         numberPickedUp = 0;
         cafeText = cafeTextObj.GetComponentInChildren<TextMeshPro>();
         visualcue.SetActive(false);
@@ -69,10 +72,12 @@ public class AnimalMechanic : MonoBehaviour
         GameObject.Destroy(VisualTrigger);
         Debug.Log("picked up "+Animal.name);
 
-        if(numberPickedUp == 5)
+        if(numberPickedUp >= totalNumberAnimals)
         {
             // show a get to the party thing or something
             //Debug.Log("picked up all animals!!!");
+            aso.clip = clips[2];
+            aso.Play();
         }
     }
 
@@ -81,7 +86,7 @@ public class AnimalMechanic : MonoBehaviour
     {
         if(other.gameObject.CompareTag("CafeDoor"))
         {
-            if (numberPickedUp <= 1)
+            if (numberPickedUp >= totalNumberAnimals)
             {
                 //show message
                 visualcue.SetActive(true);

@@ -664,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
       propertyPath: jumpPower
-      value: 9.43
+      value: 10.53
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
@@ -2489,6 +2489,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 896b0202f42005e48a0d09cce35a37f0, type: 3}
   - {fileID: 8300000, guid: ed7e52d3fa814444bbfc1eda6caf8eb7, type: 3}
+  - {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
 --- !u!1001 &1048166021
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -198,6 +198,16 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
+    public void EnableCameraMove()
+    {
+        cameraCanMove = true;
+    }
+
+    public void DisableCameraMove()
+    {
+        cameraCanMove = false;
+    }
+
     float camRotation;
 
     private void Update()
